@@ -1,0 +1,38 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  background-color: rgba(3, 111, 141, 0.93);
+
+  .logo {
+    img {
+      width: 100px;
+      animation: spin 10s infinite;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      list-style-type: none;
+      padding: 0 10px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(1.8);
+  }
+  50% {
+    transform: scale(1) translate(600px, 0) rotate(360deg);
+  }
+  100% {
+    transform: scale(1.8) translate(0, 0) rotate(0deg);
+  }
+}

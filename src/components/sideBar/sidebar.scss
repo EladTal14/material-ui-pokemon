@@ -1,0 +1,56 @@
+.sidebar {
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 104.71px;
+  left: 0;
+  //width: 20%;
+  width: 300px;
+  background-color: red;
+  padding: 10px;
+
+
+  .menu {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+
+    justify-content: space-between;
+    visibility: visible;
+
+    .line {
+      background-color: black;
+      border-radius: 15px;
+      height: 2px;
+      width: 30px;
+
+      &.disappear {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.drop-down {
+        transform: rotate(137deg) translate(0, -8px);
+      }
+
+      &.go-up {
+        transform: rotate(47deg) translate(-4px, -13px);
+      }
+
+      transition: transform 1s ease-in-out, visibility 1s ease-in-out, opacity 1s ease-in-out;
+    }
+  }
+
+
+  &.close {
+    width: 60px;
+
+    .menu {
+      right: 15px;
+    }
+  }
+
+  transition: width 0.2s ease-in-out;
+}
